@@ -1,0 +1,24 @@
+; BIND db file for vaai
+
+$ORIGIN vaai.
+$TTL 86400
+
+vaai. IN      SOA       ns1.vaai.       jmkim.ns1.vaai. (
+                        2018051200      ; serial number YYMMDDNN
+                        28800           ; Refresh
+                        7200            ; Retry
+                        864000          ; Expire
+                        86400           ; Min TTL
+                        )
+
+        IN      NS      ns1.vaai.
+
+gw-a    IN      A       10.0.44.1
+gw-b    IN      A       10.0.44.2
+gw-c    IN      A       10.0.44.3
+gw-d    IN      A       10.0.44.4
+dhcp    IN      A       10.0.45.1
+ns1     IN      A       10.0.45.11
+ns2     IN      A       10.0.45.12
+dhcp    IN      A       10.0.56.2
+dhcp    IN      A       10.0.80.2
