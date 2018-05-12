@@ -40,19 +40,19 @@ iptables_set_rules()
     #
 
     # rsync
-    iptables -t nat -A PREROUTING -i br0 -p tcp --dport 873 -j LOG --log-prefix='[netfilter] [rsync] '
-    iptables -t nat -A PREROUTING -i br0 -p tcp --dport 873 -j DNAT --to 10.0.46.1:873
+    iptables -t nat -A PREROUTING -i ens192 -p tcp --dport 873 -j LOG --log-prefix='[netfilter] [rsync] '
+    iptables -t nat -A PREROUTING -i ens192 -p tcp --dport 873 -j DNAT --to 10.0.46.1:873
 
     # ftp
-    iptables -t nat -A PREROUTING -i br0 -p tcp --dport 20 -j LOG --log-prefix='[netfilter] [ftp] '
-    iptables -t nat -A PREROUTING -i br0 -p tcp --dport 20 -j DNAT --to 10.0.46.1:20
+    iptables -t nat -A PREROUTING -i ens192 -p tcp --dport 20 -j LOG --log-prefix='[netfilter] [ftp] '
+    iptables -t nat -A PREROUTING -i ens192 -p tcp --dport 20 -j DNAT --to 10.0.46.1:20
 
-    iptables -t nat -A PREROUTING -i br0 -p tcp --dport 21 -j LOG --log-prefix='[netfilter] [ftp] '
-    iptables -t nat -A PREROUTING -i br0 -p tcp --dport 21 -j DNAT --to 10.0.46.1:21
+    iptables -t nat -A PREROUTING -i ens192 -p tcp --dport 21 -j LOG --log-prefix='[netfilter] [ftp] '
+    iptables -t nat -A PREROUTING -i ens192 -p tcp --dport 21 -j DNAT --to 10.0.46.1:21
 
-    iptables -t nat -A PREROUTING -i br0 -p tcp -m multiport --dports 49101:49300 \
+    iptables -t nat -A PREROUTING -i ens192 -p tcp -m multiport --dports 49101:49300 \
         -j LOG --log-prefix='[netfilter] [ftp] '
-    iptables -t nat -A PREROUTING -i br0 -p tcp -m multiport --dports 49101:49300 \
+    iptables -t nat -A PREROUTING -i ens192 -p tcp -m multiport --dports 49101:49300 \
         -j DNAT --to 10.0.46.1:49101-49300
 
 
