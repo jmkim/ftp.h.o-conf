@@ -1,0 +1,23 @@
+127.0.0.1       localhost
+#127.0.1.1       gw-a.harukasan.org      gw-a
+#127.0.1.1       gw-b.harukasan.org      gw-b
+#127.0.1.1       gw-c.harukasan.org      gw-c
+#127.0.1.1       gw-d.harukasan.org      gw-d
+#127.0.1.1       dhcp.vaai       dhcp
+#127.0.1.1       iori.vaai       iori
+#127.0.1.1       ns1.vaai       ns1
+#127.0.1.1       ns2.vaai       ns2
+
+10.0.44.1       gw-a.vaai       gw-a
+10.0.44.2       gw-b.vaai       gw-b
+10.0.44.3       gw-c.vaai       gw-c
+10.0.44.4       gw-d.vaai       gw-d
+10.0.45.1       dhcp.vaai       dhcp
+10.0.45.11      ns1.vaai        ns1
+10.0.45.12      ns2.vaai        ns2
+10.0.46.1       iori.vaai       iori
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
