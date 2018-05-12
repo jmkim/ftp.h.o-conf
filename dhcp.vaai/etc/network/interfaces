@@ -16,7 +16,7 @@ iface ens192 inet static
     broadcast 10.0.47.255
     gateway 10.0.44.4
     # dns-* options are implemented by the resolvconf package, if installed
-    dns-nameservers 10.0.45.11
+#    dns-nameservers 10.0.45.11
     dns-search vaai
 
 auto ens224
