@@ -73,6 +73,7 @@ iptables_set_rules()
 
     # yayoi.harukasan.org (kws.harukasan.org)
     #
+    iptables -t nat -A PREROUTING -p tcp --dport 50443 -j LOG --log-prefix='[netfilter] [https-yayoi] '
     iptables -t nat -A PREROUTING -p tcp --dport 50443 -j DNAT --to 10.0.81.253:443
     iptables -t nat -A PREROUTING -p tcp --dport 52253 -j DNAT --to 10.0.81.253:22
 
