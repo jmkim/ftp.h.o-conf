@@ -22,3 +22,12 @@ iface ens224 inet static
     # dns-* options are implemented by the resolvconf package, if installed
 #    dns-nameservers 10.0.45.11
     dns-search vaai
+
+#auto he-ipv6
+#iface he-ipv6 inet6 v4tunnel
+#    address        # Tunnel client IPv6 address
+#    netmask 64
+#    endpoint       # Tunnel server IPv4 address
+#    local          # Tunnel client IPv4 address
+#    ttl 255
+#    gateway        # Tunnel server IPv6 address
